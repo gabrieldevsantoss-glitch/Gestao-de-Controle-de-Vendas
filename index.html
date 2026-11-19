@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SGCV - Sistema de Gestão de Controle de Vendas</title>
+
+</head>
+
+<body>
+    <h1>SGCV - Sistema de Gestão de Controle de Vendas</h1>
+    <section class="forms-content">
+        <div id="register-content" class="auth-content">
+            <form id="register-form">Registrar Produto
+                <div class="form-group">
+                    <label for="nome-registro">Nome:</label>
+                    <input type="text" id="nome-registro" required>
+                </div>
+                <div class="form-group">
+                    <label for="preco-registro">Preço:</label>
+                    <input type="number" id="preco-registro" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade-registro">Quantidade:</label>
+                    <input type="number" id="quantidade-registro" required>
+                </div>
+                <button type="submit" class="auth-btn" onclick="registrarProduto()">Registrar</button>
+            </form>
+        </div>
+
+        <div id="sale-content" class="auth-content">
+            <form id="sale-form">Vender Produto
+                <div class="form-group">
+                    <label for="nome-venda">Nome do Produto:</label>
+                    <input type="text" id="nome-venda" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade-vender">Quantidade a Vender:</label>
+                    <input type="number" id="quantidade-vender" required>
+                </div>
+                <button type="submit" class="auth-btn" onclick="realizarVenda()">Vender</button>
+            </form>
+        </div>
+
+        <div id="consult-content" class="auth-content">
+            <form id="consult-form">Consultar Produto
+                <div class="form-group">
+                    <label for="nome-consulta">Nome do Produto:</label>
+                    <input type="text" id="nome-consulta" required>
+                </div>
+                <button type="submit" class="auth-btn" onclick="consultarProduto()">Consultar</button>
+            </form>
+        </div>
+
+        <div id="restock-content" class="auth-content">
+            <form id="restock-form">Reabastecer Produto
+                <div class="form-group">
+                    <label for="reestoque">Nome do Produto:</label>
+                    <input type="text" id="reestoque" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade-reposta">Quantidade a Repor:</label>
+                    <input type="number" id="quantidade-reposta" required>
+                </div>
+                <button type="submit" class="auth-btn" onclick="reporEstoque()">Repor Estoque</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="btn-section"> 
+        <div id="relatorio">
+            <button class="auth-btn" onclick="gerarRelatorio()">Gerar Relatório do dia</button>
+        </div>
+        <div id="registrar-cinco">
+            <button class="auth-btn" onclick="registrarCinco()">Registrar Cinco Produtos</button>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
